@@ -1,4 +1,5 @@
 Meteor.startup(function() {
+	Parties.remove();
 	var parties = [
 		{
 			'name': 'Dubstep-Free Zone',
@@ -13,7 +14,6 @@ Meteor.startup(function() {
 			'description': 'Leisure suit required. And only firecrest manners.'
 		}
 	];
-	Parties.remove();
 	for(var i = 0; i < parties.length; i++) {
 		Parties.insert(parties[i]);
 	}
